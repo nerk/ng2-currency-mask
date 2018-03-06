@@ -1,6 +1,7 @@
 # ng2-currency-mask
 
-A very simple currency mask directive for Angular that allows using a number attribute with the ngModel. In other words, the model is a number, and not a string with a mask. You should use the version 2.x.x for Angular 2.x.x applications and the version 4.x.x for Angular 4.x.x applications.
+A very simple currency mask directive for Angular that allows using a number attribute with the ngModel. In other words, the model is a number, and not a string with a mask. You should use the version 2.x.x for Angular 2.x.x applications, version 4.x.x for Angular 4.x.x,
+and version 5.x.x for Angular 5.x.x applications.
 
 Note: This component is ready to AoC (Ahead-of-Time) compilation.
 
@@ -71,6 +72,7 @@ Available options:
  * `allowNegative` - If `true` can input negative values.  (default: `true`)
  * `decimal` -  Separator of decimals (default: `'.'`)
  * `precision` - Number of decimal places (default: `2`)
+ * `maxDigits` - Maximum number of digits to be entered (default: `0` (= unlimited))
  * `prefix` - Money prefix (default: `'$ '`)
  * `suffix` - Money suffix (default: `''`)
  * `thousands` - Separator of thousands (default: `','`)
@@ -87,6 +89,7 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
     allowZero: true,
     decimal: ",",
     precision: 2,
+    maxDigits: 0,
     prefix: "R$ ",
     suffix: "",
     thousands: "."
