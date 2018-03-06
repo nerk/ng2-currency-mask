@@ -1,3 +1,5 @@
+import { KeyCode } from "./keycode";
+
 export class InputManager {
 
     private _storedRawValue: string;
@@ -18,10 +20,20 @@ export class InputManager {
         }
     }
 
-    updateValueAndCursor(newRawValue: string, oldLength: number, selectionStart: number): void {
+    updateValueAndCursor(newRawValue: string, oldLength: number, selectionStart: number, keyCode?: number): void {
         this.rawValue = newRawValue;
         let newLength = newRawValue.length;
-        selectionStart = selectionStart - (oldLength - newLength);
+
+        if (keyCode && (keyCode == KeyCode.BACK || keyCode == KeyCode.DELETE || keyCode == KeyCode.SAFARI_DELETE) && selectionStart <= newRawValue.search(/\d/)) {
+            selectionStart = newRawValue.search(/\d/);
+        }
+        else if (selectionStart <= newRawValue.search(/\d/)) {
+            selectionStart = newRawValue.search(/\d/) + 1;
+        }
+        else {
+            selectionStart = selectionStart - (oldLength - newLength);
+        }
+
         this.setCursorAt(selectionStart);
     }
 

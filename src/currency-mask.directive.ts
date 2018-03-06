@@ -26,6 +26,7 @@ export class CurrencyMaskDirective implements AfterViewInit, ControlValueAccesso
         allowNegative: true,
         allowZero: true,
         decimal: ".",
+        maxDigits: 0, // 0 = unlimited
         precision: 2,
         prefix: "$ ",
         suffix: "",
@@ -37,7 +38,7 @@ export class CurrencyMaskDirective implements AfterViewInit, ControlValueAccesso
             this.optionsTemplate = currencyMaskConfig;
         }
 
-        this.keyValueDiffer = keyValueDiffers.find({}).create(null);
+        this.keyValueDiffer = keyValueDiffers.find({}).create();
     }
 
     ngAfterViewInit() {
@@ -112,6 +113,6 @@ export class CurrencyMaskDirective implements AfterViewInit, ControlValueAccesso
     }
 
     writeValue(value: number): void {
-        this.inputHandler.setValue(value);
+        this.inputHandler.setValue(value || 0);
     }
 }

@@ -12,7 +12,7 @@
   "keywords": [
     "angular",
     "angular2",
-    "angular4",
+    "angular5",
     "currency",
     "mask",
     "model",
@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/nerk/ng2-currency-mask",
   "devDependencies": {
-    "@angular/common": "4.3.2",
-    "@angular/compiler": "4.3.2",
-    "@angular/compiler-cli": "4.3.2",
-    "@angular/core": "4.3.2",
-    "@angular/forms": "4.3.2",
-    "@angular/platform-browser": "4.3.2",
+    "@angular/common": "5.2.4",
+    "@angular/compiler": "5.2.4",
+    "@angular/compiler-cli": "5.2.4",
+    "@angular/core": "5.2.4",
+    "@angular/forms": "5.2.4",
+    "@angular/platform-browser": "5.2.4",
     "rxjs": "5.0.1",
     "typescript": "2.3.4",
     "zone.js": "0.8.5"

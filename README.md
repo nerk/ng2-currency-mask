@@ -4,6 +4,21 @@ A very simple currency mask directive for Angular that allows using a number att
 
 Note: This component is ready to AoC (Ahead-of-Time) compilation.
 
+This is a fork of <https://github.com/cesarrew/ng2-currency-mask>, which incorporates some existing pull requests plus a few
+additional fixes to make it working for me. The following issues should be fixed:
+
+* [Input giving NaN in Ionic 3 and Angular 4 #91](https://github.com/cesarrew/ng2-currency-mask/issues/91)
+* [<input readonly property> doesn't work #81](https://github.com/cesarrew/ng2-currency-mask/issues/81)
+* [Incorrect digit position entry when all digits selected before input #77](https://github.com/cesarrew/ng2-currency-mask/issues/77)
+* [Wrong value with "precision: 4" #75](https://github.com/cesarrew/ng2-currency-mask/issues/75)
+* [Trying to delete via backspace not working when right after thousands / decimal devider #25](https://github.com/cesarrew/ng2-currency-mask/issues/25)
+* Integrated [PR #86](https://github.com/cesarrew/ng2-currency-mask/pull/86) with two changes: option 'digitLimit' was renamed to 'maxDigits' and there is no limit by default
+
+
+Upgraded to Angular 5.
+
+Note: Default input content is always "0", not empty or the placeholder!
+
 ## Getting Started
 
 ### Installing and Importing
